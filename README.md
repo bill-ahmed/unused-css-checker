@@ -25,7 +25,7 @@ function main() {
 
   rules.forEach(rule => {
     try {
-      execSync(`cd ~/projects/my-project; ag --ignore "*.css" "${rule}" ./;`)
+      execSync(`cd ~/projects/my-project; ag --ignore "*.css" --case-sensitive --ruby --html --js -Q --literal -- '${rule}' ./;`)
     } catch (error) {
       notFound.push(rule)
       console.log(`No usages found for: ${rule}`, )
