@@ -38,3 +38,5 @@ function main() {
 
 main();
 ```
+
+At this point, you have a candidate list of un-used CSS classes and IDs. Some manual verification is likely required.
