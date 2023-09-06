@@ -17,6 +17,8 @@ function cleanRule(rule) {
 
   rule = rule.replaceAll('::before', '')
   rule = rule.replaceAll('::after', '')
+  rule = rule.replaceAll('::placeholder', '')
+
   rule = rule.replaceAll(':hover', '')
   rule = rule.replaceAll(':focus', '')
   rule = rule.replaceAll(':checked', '')
@@ -24,11 +26,19 @@ function cleanRule(rule) {
   rule = rule.replaceAll(':active', '')
   rule = rule.replaceAll(':link', '')
   rule = rule.replaceAll(':visited', '')
+  rule = rule.replaceAll(':disabled', '')
+  rule = rule.replaceAll(':invalid', '')
+  rule = rule.replaceAll(':valid', '')
+  rule = rule.replaceAll(':required', '')
+  rule = rule.replaceAll(':-webkit-autofill', '')
 
   rule = rule.replaceAll(':indeterminate', '')
 
   rule = rule.replaceAll(':first-child', '')
   rule = rule.replaceAll(':last-child', '')
+
+  rule = rule.replaceAll(':first-of-type', '')
+  rule = rule.replaceAll(':last-of-type', '')
 
 
   rule = rule.replace(/\[\w+\]/g, '')
