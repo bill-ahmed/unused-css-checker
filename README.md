@@ -33,7 +33,7 @@ function main() {
   })
 
   fs.writeFileSync('./notFound.txt', notFound.join('\n'))
-  console.log('Done')
+  console.log(`Done. Found ${notFound.length} possible un-used CSS classes and IDs.`)
 }
 
 main();
